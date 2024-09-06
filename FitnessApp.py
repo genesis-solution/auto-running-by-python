@@ -16,8 +16,7 @@ def run_application_with_credentials():
     # Print the list of window titles
     print("Window Titles:")
     for title in window_titles:
-        print(title)
-        if title == 'FP_CLOCK - Microsoft Visual Studio (Administrator)' or title == '24hr-fitness.eu':
+        if title.find('FitnessApp') >= 0 or title == '24hr-fitness.eu' or title == 'FitnessApp':
             print(title)
             window = gw.getWindowsWithTitle(title)[0]
             window.activate()
